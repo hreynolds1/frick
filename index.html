@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <head>
+        <title>Bank transfer</title>
+    </head>
+    <body>
+        <h1>Phone number</h1>
+        <input type="range" min="0" max="9999999999" id="phonenum" value="0" onchange="document.getElementById('numdisplay').innerHTML=addzeroes(this.value,10)">
+        <p id="numdisplay">0000000000</p>
+        <h2 id="accountname">Account name: </h2>
+        <div id="keyboard" style="padding-top:50px;">
+            <div class="keyboard" id="firstrow">
+            </div>
+            <div class="keyboard" id="secondrow">
+            </div>
+            <div class="keyboard" id="thirdrow">
+            </div>
+        </div>
+        <h2>BSB number</h2>
+        <select id="bsb">
+        </select>
+        <select id="bsb2">
+        </select>
+        <h2>Amount paid</h2>
+        <div id="amount">
+            <button class="active" onmouseout="amountchange(-1)">-</button>
+            <h2 id="amountpaid">$0</h2>
+            <button class="active" onmouseout="amountchange(+1)">+</button>
+        </div>
+        
+    </body>
+    <script src="cursedphone.js"></script>
+</html>
