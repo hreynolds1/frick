@@ -41,3 +41,6 @@ option{
     justify-content: center;
     padding: 5px;
 }
+a:after{
+    color:black;
+}
