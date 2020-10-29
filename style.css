@@ -44,6 +44,6 @@ option{
 a:after{
     color:black;
 }
-a{
-    cursor: not-allowed;
+#here{
+    cursor: default;
 }
