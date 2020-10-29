@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <head>
-        <title>Bank transfer</title>
+        <title>Bank transfer | Page 1</title>
     </head>
     <body>
-        <h1>Phone number</h1>
+        <h1>Bank transfer to your account</h1>
+        <h2>Phone number</h2>
         <input type="range" min="0" max="9999999999" id="phonenum" value="0" onchange="document.getElementById('numdisplay').innerHTML=addzeroes(this.value,10)">
         <p id="numdisplay">0000000000</p>
         <h2 id="accountname">Account name: </h2>
@@ -19,17 +19,15 @@
             </div>
         </div>
         <h2>BSB number</h2>
-        <select id="bsb">
-        </select>
-        <select id="bsb2">
-        </select>
+        <button id="bsb1" onclick="increaseval(this,this.innerHTML,1,'',9999,4)">0000</button>
+        <button id="bsb2" onclick="increaseval(this,this.innerHTML,1,'',9999,4)">0000</button>
         <h2>Amount paid</h2>
         <div id="amount">
-            <button class="active" onmouseout="amountchange(-1)">-</button>
+            <button class="active" onmouseout="increaseval(document.getElementById('amountpaid'),document.getElementById('amountpaid').innerHTML.replace('$',''),-1,'$',0)">-</button>
             <h2 id="amountpaid">$0</h2>
-            <button class="active" onmouseout="amountchange(+1)">+</button>
+            <button class="active" onmouseout="increaseval(document.getElementById('amountpaid'),document.getElementById('amountpaid').innerHTML.replace('$',''),1,'$',0)">+</button>
         </div>
-        
+        <p>Click <a href="email.html" style="text-decoration: none;colour:black;">here</a> to go to the <a style='color:blue;text-decoration: underline' href="#"> next page</a></p>
     </body>
     <script src="cursedphone.js"></script>
 </html>
