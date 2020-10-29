@@ -23,10 +23,15 @@ function updatephonenum(ele){
 function buttonpress(ele){
     document.getElementById("accountname").innerHTML+=ele.innerHTML
 }
-function amountchange(amount){
-    amountdisplay=document.getElementById("amountpaid")
-    amountdisplay.innerHTML=parseInt(amountdisplay.innerHTML.replace("$",""))+amount
-    amountdisplay.innerHTML="$"+amountdisplay.innerHTML
+function increaseval(ele,currentvalue,value,priortext,loop=0,addzero=0){
+    currentvalue=parseInt(currentvalue)
+    if (loop!=0 && (currentvalue+value)>loop){
+        ele.innerHTML=currentvalue+value-loop-1
+    } else {
+        ele.innerHTML=currentvalue+value
+    }
+    ele.innerHTML=addzeroes(parseInt(ele.innerHTML),addzero)
+    ele.innerHTML=priortext+ele.innerHTML
 }
 alphabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 shuffle(alphabet)
@@ -38,10 +43,4 @@ for (i=0;i<9;i++){
 }
 for (i=0;i<7;i++){
     newele("DIV","",alphabet[i+19],document.getElementById("thirdrow"),"active",function() {buttonpress(this)})
-}
-for (i=0;i<9999;i++){
-    newele("OPTION","",addzeroes(i,4),document.getElementById("bsb"),"emptyclass","",i)
-}
-for (i=0;i<9999;i++){
-    newele("OPTION","",addzeroes(i,4),document.getElementById("bsb2"),"emptyclass","",i)
 }
