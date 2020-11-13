@@ -1,2 +1,2 @@
-# fuck
-why
+# god
+has abandoned us
