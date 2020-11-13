@@ -44,3 +44,22 @@ for (i=0;i<9;i++){
 for (i=0;i<7;i++){
     newele("DIV","",alphabet[i+19],document.getElementById("thirdrow"),"active",function() {buttonpress(this)})
 }
+/*
+for (i=0;i<9999;i++){
+    newele("OPTION","",addzeroes(i,4),document.getElementById("bsb"),"emptyclass","",i)
+}
+for (i=0;i<9999;i++){
+    newele("OPTION","",addzeroes(i,4),document.getElementById("bsb2"),"emptyclass","",i)
+}*/
+time=0
+setInterval(function(){time+=0.1},100)
+function submitdata(){
+    sessionStorage.setItem("phonenum",addzeroes(document.getElementById("phonenum").value,10))
+    sessionStorage.setItem("useraccount",document.getElementById("accountname").innerHTML.replace("Account name: ",""))
+    sessionStorage.setItem("bsbnumber",(""+document.getElementById("bsb1").innerHTML+""+document.getElementById("bsb2").innerHTML))
+    sessionStorage.setItem("amountpaid",document.getElementById("amountpaid").innerHTML.replace("$",""))
+    sessionStorage.setItem("time",time)
+    console.log(time.toFixed(2))
+    console.log(parseFloat(sessionStorage.getItem("time")).toFixed(2))
+    window.location.href="./email.html"
+}

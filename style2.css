@@ -1,0 +1,27 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html{
+    font-family: Ubuntu;
+}
+body{
+    background-image: url('https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?size=626&ext=jpg');
+    background-size: contain;
+}
+#results{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 400px;
+    height: 670px;
+    background-color: blue;
+    border-radius: 10px;
+    border: 5px solid black;
+}
+h1,h2,h3{
+    padding: 20px;
+}
+button{
+    margin-left: 20px;
+}

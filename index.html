@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <link rel="stylesheet" href="style.css">
     <head>
         <title>Bank transfer | Page 1</title>
     </head>
     <body>
         <h1>Bank transfer to your account</h1>
+        <h3>Note: This does not actually transfer any money</h3>
         <h2>Phone number</h2>
         <input type="range" min="0" max="9999999999" id="phonenum" value="0" onchange="document.getElementById('numdisplay').innerHTML=addzeroes(this.value,10)">
         <p id="numdisplay">0000000000</p>
@@ -27,7 +28,7 @@
             <h2 id="amountpaid">$0</h2>
             <button class="active" onmouseout="increaseval(document.getElementById('amountpaid'),document.getElementById('amountpaid').innerHTML.replace('$',''),1,'$',0)">+</button>
         </div>
-        <p>Click <a href="email.html" style="text-decoration: none;colour:black;" id="here">here</a> to go to the <a style='color:blue;text-decoration: underline' href="#"> next page</a></p>
+        <p>Click <span id="here" onclick="submitdata()">here</span> to go to the <a style='color:blue;text-decoration: underline' href="#"> next page</a></p>
     </body>
     <script src="cursedphone.js"></script>
 </html>
