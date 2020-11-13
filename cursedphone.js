@@ -59,7 +59,5 @@ function submitdata(){
     sessionStorage.setItem("bsbnumber",(""+document.getElementById("bsb1").innerHTML+""+document.getElementById("bsb2").innerHTML))
     sessionStorage.setItem("amountpaid",document.getElementById("amountpaid").innerHTML.replace("$",""))
     sessionStorage.setItem("time",time)
-    console.log(time.toFixed(2))
-    console.log(parseFloat(sessionStorage.getItem("time")).toFixed(2))
-    window.location.href="./email.html"
+    if (document.getElementById("phonenum").value!=0 && document.getElementById("accountname").innerHTML!="Account name: " && (""+document.getElementById("bsb1").innerHTML+""+document.getElementById("bsb2").innerHTML)!="00000000" && document.getElementById("amountpaid").innerHTML!=0){window.location.href="./email.html"}
 }
